@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .content {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #007bff;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to the Interactive Guide</h1>
+        <p>Click the buttons below to reveal more information.</p>
+
+        <button onclick="showContent('section1')">Section 1: Introduction</button>
+        <div id="section1" class="content">
+            <p>This is an introduction to the interactive guide. You can navigate different sections to learn more.</p>
+        </div>
+
+        <button onclick="showContent('section2')">Section 2: Features</button>
+        <div id="section2" class="content">
+            <p>This section covers the features of our product. It is designed to be user-friendly and efficient.</p>
+        </div>
+
+        <button onclick="showContent('section3')">Section 3: Get Started</button>
+        <div id="section3" class="content">
+            <p>To get started, sign up and follow the easy step-by-step guide to explore our features.</p>
+        </div>
+    </div>
+
+    <script>
+        function showContent(sectionId) {
+            var content = document.getElementById(sectionId);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(() => {
+                    console.log('Service Worker Registered');
+                });
+        }
+    </script>
+</body>
+
+</html>
