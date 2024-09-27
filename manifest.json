@@ -1,16 +1,10 @@
 {
     "name": "Interactive Guide",
     "short_name": "Guide",
-    "start_url": "/",
+    "start_url": "/index.html",
     "display": "standalone",
     "background_color": "#ffffff",
-    "description": "A fully interactive HTML guide",
-    "icons": [
-      {
-        "src": "icon.png",
-        "sizes": "192x192",
-        "type": "image/png"
-      }
-    ]
+    "theme_color": "#007bff",
+    "description": "A fully interactive HTML guide"
   }
   
